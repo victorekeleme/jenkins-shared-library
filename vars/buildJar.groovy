@@ -2,5 +2,5 @@
 
 def call(){
     echo "Building application jar"
-    sh "mvn package"
+    sh "mvn clean package"
 }
