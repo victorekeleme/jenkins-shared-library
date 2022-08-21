@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!usr/bin/env groovy
 
 def call(String imageName) {
@@ -11,5 +10,3 @@ def call(String imageName) {
     sh "docker push vistein12/$imageName"
 
 }
-=======
->>>>>>> parent of 3dde1b0 (groovy changes)
