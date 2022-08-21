@@ -2,5 +2,5 @@
 import com.example.AWS
 
 def call() {
-    return new AWS(this).loginAWS()
+    return new AWS(this).loginAWSECR()
 }

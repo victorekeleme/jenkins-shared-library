@@ -8,7 +8,7 @@ class AWS implements Serializable {
     AWS(script) {
         this.script = script
     }
-    def loginAWS() {
+    def loginAWSECR() {
         withCredentials([aws(accessKeyVariable:'AWS_ACCESS_KEY_ID',credentialsId:'aws-credentials',secretKeyVariable:'AWS_SECRET_ACCESS_KEY')]) {
         sh "aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 524360703326.dkr.ecr.us-east-2.amazonaws.com"
     }
