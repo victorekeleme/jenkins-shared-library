@@ -11,7 +11,7 @@ class Docker implements Serializable {
 
     def buildDockerImage(String imageName) {
         script.echo "Building the application docker image"
-        script.sh "docker build -t $imageName ."
+        script.sh "docker build -t $script.imageName ."
     }
 
     def login() {
@@ -21,7 +21,7 @@ class Docker implements Serializable {
     }
 
     def pushDockerImage(String imageName) {
-        script.sh "docker push $imageName"
+        script.sh "docker push $script.imageName"
     }        
 
 }
