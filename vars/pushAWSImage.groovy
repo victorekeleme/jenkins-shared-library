@@ -1,4 +1,5 @@
 #!usr/bin/env groovy
+import com.example.AWS
 
 def call(String imageName) {
     echo "Pushing Docker Image to AWS"

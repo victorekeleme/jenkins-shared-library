@@ -9,7 +9,7 @@ class Nexus implements Serializable {
         this.script = script
     }
 
-    def nexusLoginPush(String imageName) {
+    def nexusPush(String imageName) {
         
         script.sh "echo Pushin to Nexus"
         script.withCredentials([usernamePassword(credentialsId: 'nexus-credentials', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
