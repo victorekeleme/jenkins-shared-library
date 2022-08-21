@@ -2,5 +2,6 @@
 import com.example.Nexus
 
 def call(String imageName) {
-    return new Nexus(this).nexusLoginPush(imageName)
+    sh "groovy --version"
+    // return new Nexus(this).nexusLoginPush(imageName)
 }
