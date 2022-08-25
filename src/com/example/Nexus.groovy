@@ -12,7 +12,7 @@ class Nexus implements Serializable {
     def nexusPush(String imageName) {
         
         script.sh "echo Pushin to Nexus"
-        script.withCredentials(usernamePassword(credentialsId: 'nexus-credentials', passwordVariable: 'PASS', usernameVariable: 'USER')) {
+        script.withCredentials([usernamePassword(credentialsId: 'nexus-credentials', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
         script.sh "echo $script.PASS | docker login -u $script.USER --password-stdin 159.203.37.16:8083"
         }
         script.sh "docker tag $imageName 159.203.37.16:8083/$imageName"
